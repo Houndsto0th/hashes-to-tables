@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'haml'
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'

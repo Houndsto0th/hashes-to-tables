@@ -1,0 +1,28 @@
+
+.page-header
+  %h1 People
+%table.table.table-bordered
+  %thead
+    %th
+      = link_to "First Name", root_path(sort_by: "first_name")
+    %th
+      = link_to "Last Name", root_path(sort_by: "last_name")
+    %th
+      = link_to "Date of Birth", root_path(sort_by: "date_of_birth")
+    %th
+      = link_to "Eye Color", root_path(sort_by: "eye_color")
+    %th
+      = link_to "Phone Number", root_path(sort_by: "telephone_number")
+  %tbody
+  -@people.each do |person|
+    %tr
+      %td
+        %p= person[:first_name]
+      %td
+        %p= person[:last_name]
+      %td
+        %p= person[:date_of_birth].strftime("%m/%d/%Y")
+      %td
+        %p= person[:eye_color]
+      %td
+        %p= person[:telephone_number]
